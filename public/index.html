@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>React App</title>
+    <script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>
+    <style type="text/css">
+
+       
+
+      .file1{
+         border-style: double;
+        border-width: 5px;
+        display: flex3;
+      }
+
+    
+     </style>
+     <script>
+        function validateForm() {
+
+            var x = document.forms["myForm"]["Email"].value;
+                    if (x == "") {
+                    
+                            alert("Please Enter Your Email");
+                     return false;
+                    }
+            var a = document.forms["myForm"]["pass"].value;
+                    if (a == "") {
+                    
+                            alert("Please Enter Your Password");
+                     return false;
+                    }
+                }
+  
+              var $=jQuery.noConflict();
+              $('#chooseFile').bind('change', function () {
+
+              var filename = $("#chooseFile").val();
+
+              if (/^\s*$/.test(filename)) {
+
+              $(".file-upload").removeClass('active');
+
+              $("#noFile").text("No file chosen..."); 
+                }
+              else {
+
+              $(".file-upload").addClass('active');
+
+              $("#noFile").text(filename.replace("C:\\fakepath\\", "")); 
+              }
+               });
+
+    </script> 
+  </head>
+  <body>
+     <div >
+      <center>
+        <h1>
+          <l>
+            <marquee behavior="scroll" direction="right" scrollamount="20">WELCOME TO MY PAGE</marquee>
+          </l>
+        </h1>
+      </center>
+     </div>
+    <div id="root">
+    </div>
+    
+    <div class="file1">
+    <div class="file-upload">
+    <div class="file-select">
+    <div class="file-select-button" id="fileName">Choose File</div>
+    <input type="file" name="chooseFile" id="chooseFile">
+    </div>
+    </div>
+    </div>
+  </body>
+</html>

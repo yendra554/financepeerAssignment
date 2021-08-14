@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>React App</title>
+    <script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
+     <script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
+      <script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>
+      <style>
+           body{
+                 background:linear-gradient(to left, green, white);
+                 margin-left: 550px;
+                 padding: 50px ;
+                 box-sizing:border-box;
+                 color:white;
+
+
+               }
+ 
+               .container{
+               display:flex;
+               align-items:center;
+               justify-content:center;
+               height:100vh;
+               width:100%;
+
+
+             }
+
+             .form-box{
+               width:0px;
+               height:0px;
+               background-color:black;bo
+               padding:20px;
+               display:flex;
+               flex-direction:column;
+               justify-content:flex-start;
+               opacity:0.5;
+               border-radius:3%;
+     
+             }
+
+             .header-form{
+              margin-bottom:0;
+            }
+
+
+          input:hover{
+            background-color: #80ff80;
+          }
+          button{
+              margin-top:40px;
+              margin-bottom:10px;
+            }
+             .message{
+              display:flex;
+              justify-content:space-between
+            }
+      </style>
+
+<script>
+            function validateForm() {
+                    var x = document.forms["myForm"]["name"].value;
+                    if (x == "") {
+                            alert("Please Enter Your Name");
+                     return false;
+                    }
+                    var a = document.forms["myForm"]["Email"].value;
+                    if (a == "") {
+                    
+                            alert("Please Enter Your Email");
+                     return false;
+                    }
+                     var c = document.forms["myForm"]["phone"].value;
+                    if (c == "") {
+                    
+                            alert("Please Re-enter Your Mobile Number");
+                     return false;
+                    }
+                    
+                    var e = document.forms["myForm"]["confirm"].value;
+                    if (e == "") {
+                        alert("Please Re-enter Your Password");
+                     return false;
+                    }
+                    var p = document.forms["myForm"]["pass"].value;
+                    if (p == "") {
+                    
+                            alert("Please Enter Your Password");
+                     return false;
+                    }
+            }
+            function matchPassword(obj){
+                if(document.getElementById("password").value!=obj.value){
+                    console.log(obj.value,document.getElementById("password"));
+                    alert("password does not match");
+                }
+            }
+
+        </script>
+  </head>
+  <body>
+    <div className="container">
+        <div className="form-box">
+          <div className="header-form">
+            <h4 className="text-primary text-center"><i className="fa fa-user-circle" ></i></h4>
+            <div className="image">
+            </div>
+          </div>
+          <div className="body-form">
+           <form name="myForm" method="get" onsubmit="return validateForm()">
+
+              <div className="input-group mb-3">
+              <div className="input-group-prepend">
+              <span className="input-group-text"><i class="fa fa-user"></i></span>
+              </div>
+              <div>
+              <label><b>Name:</b></label>
+              </div>
+              <input type="text" className="form-control" placeholder="name"pattern="" />
+              </div>
+              <div className="input-group mb-3">
+              <div className="input-group-prepend">
+              <span className="input-group-text"><i class="fa fa-user"></i></span>
+              </div>
+              <div>
+             <label for="gender"><b>Gender:</b></label>
+              </div>
+              
+                          <select>
+                             <option><b>Male</b></option>
+                             <option><b>Female</b></option>
+                             <option><b>Other</b></option>
+                          </select>
+              </div>
+              <div className="input-group mb-3">
+              <div className="input-group-prepend">
+              <span className="input-group-text"><i class="fa fa-user"></i></span>
+              </div>
+              <div>
+              <label><b>Email:</b></label>
+              </div>
+              <input type="text" className="form-control" placeholder="email"pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+              </div>
+               <div className="input-group mb-3">
+              <div className="input-group-prepend">
+              <span className="input-group-text"><i class="fa fa-lock"></i></span>
+              </div>
+              <div className="input-group mb-3">
+              <div className="input-group-prepend">
+              <span className="input-group-text"><i class="fa fa-user"></i></span>
+              </div>
+              <div>
+              <label><b>Number</b></label>
+              </div>
+              <input type="text" className="form-control" placeholder="number"pattern="" />
+              </div>
+              <div>
+              <label><b>Password:</b></label>
+              </div>
+              <input type="text" className="form-control" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+              </div>
+              <div className="input-group mb-3">
+              <div className="input-group-prepend">
+              <span className="input-group-text"><i class="fa fa-lock"></i></span>
+              </div>
+              <div>
+              <label><b>Confirm Password:</b></label>
+              </div>
+              <input type="text" className="form-control" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,} " />
+              </div>
+              <button type="submit" >Signup</button>
+              <div>
+              <a href="index.html ">I have An Account</a>
+              </div>
+           </form>
+            
+          </div>
+        </div>
+       </div>   
+</html>
